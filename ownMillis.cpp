@@ -2,7 +2,7 @@
 
 unsigned long mCount;
 void initMillis(){
-    TCNT0 = 6;
+    TCNT0 = 0;
     TCCR0B = (1<<CS01)|(1<<CS00);
     TCCR0A = (1<<WGM01);
     OCR0A = overFlowCount;
@@ -19,5 +19,5 @@ unsigned long GetSec(){
 
 ISR(TIMER0_COMPA_vect){
    mCount++;
-   TCNT0 = 6;
+   TCNT0 = 0;
 }
