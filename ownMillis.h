@@ -4,7 +4,7 @@
 
 #include <avr\io.h>
 #include <avr/interrupt.h>
-#define overFlowCount 0xfa 
+#define overFlowCount 249 
 #endif
 
 unsigned long GetMillis();
